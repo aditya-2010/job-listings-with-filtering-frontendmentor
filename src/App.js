@@ -25,6 +25,7 @@ function App() {
   }, [filters]);
 
   function handleAddFilter(item) {
+    if (filters.includes(item)) return;
     setFilters((currFilters) => [...currFilters, item]);
   }
 
